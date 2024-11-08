@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details</title>
+</head>
+<body>
+    <header>
+        <a href="index.html">Back to Courses</a>
+    </header>
+    
+
+    <section
+     id="course-details" style="background-color: #b5ddf0;">
+        <h2 id="course-title">Course Title</h2>
+        <img id="course-image" src="" alt="Course Image" style="width:50%; height:auto;">
+        <p id="course-description">Course Description</p>
+        <ul id="course-details-list"></ul>
+        <button style=" background-color: #ff7f50; /* Coral background color */
+        color: white;
+        padding: 20px 40px; /* Larger padding for a bigger button */
+        font-size: 18px; /* Bigger text */
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 12px; /* More rounded corners */
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        border: 2px solid transparent; /* Initial border */
+        cursor: pointer;
+        display: inline-block;
+        margin-top: 30px; /* Space between button and other content */
+        width: 100%;"  onclick="addToCart(document.getElementById('course-title').textContent)">Add to Cart</button>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>

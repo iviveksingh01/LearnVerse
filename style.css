@@ -1,0 +1,307 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+.logo {
+    width: 120px; /* Adjust the width as needed */
+    height: auto;
+    margin-right: 20px; /* Add space between the logo and other elements */
+}
+
+/* Header Styling */
+header {
+    background-color: #A9CCE3;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.brand-name {
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #333;
+}
+
+nav a {
+    color: black;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: row; /* Arrange items in a row */
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+.hero-text {
+    align-items: center;
+    max-width: 75%;
+}
+
+.hero h1 {
+    font-size: 36px;
+    align-items: center;
+    color: #333;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.hero p {
+    font-size: 16px;
+    color: #666;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background-color: #ffa500;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.hero-btn:hover {
+    background-color: #e68900;
+}
+
+/* Main Image */
+.main-image {
+    max-width: 45%; /* Make the image slightly smaller to fit well */
+    height: auto;
+    border-radius: 8px;
+    order: 2; /* Ensure the image is on the right side */
+    float: right;
+}
+
+/* Course List Section */
+.course-list {
+    padding: 40px 20px;
+    background-color: #A9CCE3;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Create flexible columns */
+    gap: 20px; /* Add space between grid items */
+}
+
+/* Each Course Item */
+.course {
+    background-color: #d9e8ec;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, background-color 0.3s;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.course:hover .layer {
+    opacity: 1;
+}
+
+.layer h3, .layer p {
+    margin: 10px 0;
+}
+
+.course:hover {
+    background-color: rgb(5, 165, 152);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.course h3 {
+    font-size: 20px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.course p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+}
+.course-image {
+    width: 100%;
+    height: 150px; /* Adjust the height as needed */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 8px 8px 0 0; /* Rounded corners at the top */
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    /* Stack elements for mobile */
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .course-list {
+        padding: 20px;
+    }
+
+    .course {
+        margin-bottom: 20px;
+    }
+}
+.services-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #A9CCE3;
+}
+
+.services-section h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+}
+#course-image {
+    width: 80%; /* Ensures the image isn't too large */
+    max-width: 600px; /* Prevents image from getting too big */
+    height: auto;
+    margin: 20px auto; /* Centers the image */
+    display: block;
+    border-radius: 8px;
+}
+@media (max-width: 768px) {
+    #course-details {
+        padding: 20px;
+    }
+
+    #course-title {
+        font-size: 28px;
+    }
+
+    #course-description {
+        font-size: 16px;
+    }
+
+    #course-image {
+        width: 100%; /* Make the image take full width on small screens */
+        max-width: 100%; /* Remove max width limitation */
+    }
+
+    .add-to-cart {
+        font-size: 16px;
+    }
+}
+button {
+    background-color: #ff7f50; /* Coral background color */
+    color: white;
+    padding: 15px 30px; /* Larger padding for a bigger button */
+    font-size: 18px; /* Bigger text */
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: 2px solid transparent; /* Initial border */
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 20px; /* Space between button and other content */
+}
+
+button:hover {
+    background-color: #ff5722; /* Darker shade on hover */
+    transform: scale(1.1); /* Slightly increase button size on hover */
+    border-color: #ff5722; /* Add border color on hover */
+}
+
+button:active {
+    background-color: #e64a19; /* Even darker shade when clicked */
+    transform: scale(0.98); /* Slightly shrink on click */
+}
+.add-to-cart {
+    background-color: #ff7f50; /* Coral background color */
+    color: white;
+    padding: 20px 40px; /* Larger padding for a bigger button */
+    font-size: 18px; /* Bigger text */
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 12px; /* More rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: 2px solid transparent; /* Initial border */
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 30px; /* Space between button and other content */
+    width: 100%; /* Full width for the button on course details page */
+}
+
+/* Hover effect for Add to Cart button */
+.add-to-cart:hover {
+    background-color: #ff5722; /* Darker shade on hover */
+    transform: scale(1.1); /* Slightly increase button size on hover */
+    border-color: #ff5722; /* Add border color on hover */
+}
+
+/* Active state for Add to Cart button */
+.add-to-cart:active {
+    background-color: #e64a19; /* Even darker shade when clicked */
+    transform: scale(0.98); /* Slightly shrink on click */
+}
