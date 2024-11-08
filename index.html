@@ -1,75 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Development Courses</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learnverse</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color: white;">
-    <header>
-        <div class="header-container">
-            <img src="learnverse-high-resolution-logo-transparent.png" alt="learn" class="logo">
-            <h1 class="brand-name">LearnVerse</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="course.html">Services</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </div>
-    </header>
-   
-    <section>
-        <div class="hero">
-            <div class="hero-text">
-            <h1 style="align-items: center;">Grow Your Skills, define your Future</h1>
-            <p style="align-items: center;">Present research conducted by reseachers from  across the county examining what it is like for people</p>
-            <a href="#" class=" hero-btn">Read More</a>
-        </div>
-        <div>
-             <iframe width="560" height="315" src="https://www.youtube.com/embed/ZxKM3DCV2kE?si=pMXikXgfwm2oxMRj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <img src="React Developer Course (Facebook Post).jpg" alt="Main Image" class="main-image">
-           
-        </div>
-    </section>
-    
+<body>
 
-    <section class="Services-section">
-      
-        <h2>Services</h2>
-        <div class="course-list">
-        
-      
-        <div class="course" onclick="showCourseDetails('course1')">
-            <div class="layer">
-            <img src="html .jpg" alt="web Design" class="course-image">
-            <h3>Web Design</h3>
-            <p>Learn the foundations of web development with the help of HTML and CSS.</p>
-            <button>View Course</button>
-            </div>
+  <!-- Header -->
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <!-- Logo and Company Name -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="learnverse-high-resolution-logo-transparent.png" alt="Learnverse Logo">Learnverse</a>
+        <!-- Toggle button for mobile menu -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navigation Menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
         </div>
-        <div class="course" onclick="showCourseDetails('course2')">
-            <img src="javascript course.jpg" alt="JavaScript" class="course-image">
-            <h3>JavaScript Essentials</h3>
-            <p>Master JavaScript for interactive web applications.</p>
-            <button>View Course</button>
-        </div>
-        <div class="course" onclick="showCourseDetails('course3')">
-            <img src="cybersecuritycourse.jpg" alt="cybersecurtiy course" class="course-image">
-            <h3>Cybersecurity</h3>
-            <p>Master Cybersecurity, learn encryption and data security techniques.</p>
-            <button>View Course</button>
-        </div>
-        <div class="course" onclick="showCourseDetails('course4')">
-            <img src="it and  seccuriity.jpg" alt="it and security" class="course-image">
-            <h3>IT Strategy Development</h3>
-            <p>Learn the process of creating a framework to use technology for business goals.</p>
-            <button>View Course</button>
-            </div>
-        </div>
-    </section>
+      </div>
+    </nav>
+  </header>
 
-    <script src="app.js"></script>
+  <!-- New Section with Three Columns -->
+  <div class="container-fluid py-5 section-content">
+    <div class="container-fluid">
+    <div class="row">
+      <!-- First Column with Text Box -->
+      <div class="col-md-4">
+        <div class="cardd p-4">
+          <h2>Grow Your Skills, define your Future</h2>
+          <p class="mt-4">Present research conducted by reseachers from across the county examining what it is like for people.</p>
+          <button class="btn btn-warning">Read More</button>
+        </div>
+
+      </div>
+
+      <!-- Second Column with YouTube Video -->
+      <div class="col-md-4 d-flex align-items-center justify-content-center">
+        <iframe width="100%" height="410" src="https://www.youtube.com/embed/ZxKM3DCV2kE?si=pMXikXgfwm2oxMRj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <!-- Third Column with an Image -->
+      <div class="col-md-4 d-flex align-items-center justify-content-center">
+        <img src="React Developer Course (Facebook Post).jpg" alt="Learnverse Image" class="img-fluid rounded">
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Services Section -->
+<div class="container-fluid py-5" id="services">
+  <h2 class="text-center mb-4">Our Courses</h2>
+  <div class="row g-4">
+    <!-- Card 1 -->
+    <div class="col-md-3">
+      <div class="card course-card">
+        <a href="course-details.html?courseId=html-css"></a>
+        <img src="html .jpg" class="card-img-top" alt="Course 1">
+        <div class="card-body">
+          <h5 class="card-title">HTML and CSS </h5>
+          <p class="card-text">Learn the foundations of web development with the help of HTML and CSS.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="col-md-3">
+      <div class="card course-card">
+        <img src="javascript course.jpg" class="card-img-top" alt="Course 2">
+        <div class="card-body">
+          <h5 class="card-title">JavaScript Essential</h5>
+          <p class="card-text">Master JavaScript for interactive web applications.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="col-md-3">
+      <div class="card course-card">
+        <img src="cybersecuritycourse.jpg" class="card-img-top" alt="Course 3">
+        <div class="card-body">
+          <h5 class="card-title">cybersecurity</h5>
+          <p class="card-text">Master Cybersecurity, learn encryption and data security techniques.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card course-card">
+        <img src="it and  seccuriity.jpg" class="card-img-top" alt="Course 2">
+        <div class="card-body">
+          <h5 class="card-title">IT advanced</h5>
+          <p class="card-text">Learn the process of creating a framework to use technology for business goals</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- JavaScript for Bootstrap -->
+  <script src="app.js"></script>
 </body>
 </html>
